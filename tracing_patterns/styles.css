@@ -1,0 +1,94 @@
+
+.source-serif-4-SS4 {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+.public-sans-PS {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body{
+    overflow:hidden;
+}
+
+.footsteps{
+    color:olive;
+}
+
+b{
+    background-color:white;
+}
+
+pre{
+    font-family: "Source Serif 4", serif;
+    font-weight:300;
+    padding:100px;
+    color:rgb(#888888);
+}
+
+.gradient{
+    position:fixed;
+    width:33%;
+    pointer-events:none;
+    z-index:1;
+    opacity:0.75;
+}
+
+#gradient1{
+    top:-100px;
+    background-image: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,1));
+    height:120%;
+    left:0;
+}
+#gradient2{
+    top:-100px;
+    background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+    height:120%;
+    right:0;
+}
+#gradient3{
+    background-image: linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255,1));
+    top:0;
+    height:20%;
+    width:100%;
+}
+#gradient4{
+background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+bottom:0;
+    height:20%;
+    width:100%;}
+
+h2{
+    font-family: "Source Serif 4", serif;
+    font-weight:400;
+    font-style:italic;
+    padding:100px;
+    margin-left:200px;
+}
+
+#doubleruin{
+    
+    margin-left:500px;
+}
+#nostalgiaforruins{
+    
+    margin-left:-300px;
+    margin-top:300px;
+}
+#prisons{
+    
+margin-left:-600px;
+margin-top:300px;
+}
+
+#flex{
+display:flex;
+flex-gap:0px;
+}
