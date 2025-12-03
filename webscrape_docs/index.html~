@@ -1,0 +1,72 @@
+ <head>
+    <meta lang="en">
+    <title>WEBSCRAPE ADVENTURE</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+
+ <script>
+   const VIDEO_COUNT = 4;
+   let curr = 1;
+   let videos = [];
+   function onNext(){
+       console.log("next");
+       let prev = curr;
+       if (curr < VIDEO_COUNT - 1){
+	   ++curr;
+       }
+       else{
+	   curr = 0;
+       }
+       videos[curr].hidden = false;
+       videos[prev].hidden = true;
+   }
+
+   window.addEventListener("load", ()=>{
+       console.log("loaded");
+       videos.push(document.querySelector("#zero"));
+       videos.push(document.querySelector("#one"));
+       videos.push(document.querySelector("#two"));
+       videos.push(document.querySelector("#three"));
+       console.log(videos);
+       
+   });
+ </script>
+<body>
+  <h2>webscrape adventure</h2>
+  <p>little program that puts the user in the perspective of a webscraper trawling a webpage, using the language of a first person text adventure, presented via video documentation showing examples of how different sites are displayed and navigated using the interface. built using node.js, express, p5 and RiTa. </p>
+  <div id="container">
+    <div class="docs" id="zero" hidden>
+      <video width="800", height="400" controls>
+	<source src="0.mp4"></source>
+      </video>
+      <label>"The Dead World of Blippi", from Current Affairs.</label>
+      <a href="https://www.currentaffairs.org/news/2020/08/the-dead-world-of-blippi">https://www.currentaffairs.org/news/2020/08/the-dead-world-of-blippi</a>
+    </div>
+   
+    <div class="docs" id="one" >
+      <video width="800", height="400" controls>
+	<source src="1.mp4"></source>
+      </video>
+      <label>"Links to Other String Figure Pages", from the International String Figures Association's Webpage.</label>
+      <a href="https://isfa.org/isfa5.htm">https://isfa.org/isfa5.htm</a>
+    </div>
+
+     <div class="docs" id="two" hidden>
+      <video width="800", height="400" controls>
+	<source src="2.mp4"></source>
+      </video>
+      <label>"The Great Silence", from e-flux magazine, by Ted Chiang and Allora & Calzadilla.</label>
+      <a href="https://www.e-flux.com/journal/65/336684/the-great-silence">https://www.e-flux.com/journal/65/336684/the-great-silence</a>
+     </div>
+     
+     <div class="docs" id="three" hidden>
+      <video width="800", height="400" controls>
+	<source src="4.mp4"></source>
+      </video>
+      <label>Exhibition of Pierre Huyghe's "Liminal", page from Palazzo Grassi Museum.</label>
+      <a href="https://www.pinaultcollection.com/palazzograssi/en/pierre-huyghe-liminal">https://www.pinaultcollection.com/palazzograssi/en/pierre-huyghe-liminal</a>
+    </div>
+   <button onclick="onNext();">next</button>
+    </div>
+  </body>
